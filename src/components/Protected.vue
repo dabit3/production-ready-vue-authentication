@@ -9,6 +9,3 @@ export default {
   name: 'protected',
 }
 </script>
-
-<style>
-</style>
