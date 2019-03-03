@@ -15,8 +15,8 @@
       </router-link>
     </div>
     <router-view></router-view>
-    <div class='sign-out'>
-      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
+    <div class='sign-out' v-if="signedIn">
+      <amplify-sign-out ></amplify-sign-out>
     </div>
   </div>
 </template>

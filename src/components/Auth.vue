@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { AmplifyEventBus } from 'aws-amplify-vue'
 
 export default {
   name: 'app'
