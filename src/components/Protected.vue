@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Hello from protected route!</h1>
-  </div>
+  <h1>Hello from protected route!</h1>
 </template>
 
 <script>

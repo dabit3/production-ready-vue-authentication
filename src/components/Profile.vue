@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Welcome, {{this.user.username}}</h1>
-  </div>
+  <h1>Welcome, {{this.user.username}}</h1>
 </template>
 
 <script>
