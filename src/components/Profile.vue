@@ -1,5 +1,5 @@
 <template>
-  <h1>Welcome, {{this.user.username}}</h1>
+  <h1>Welcome, {{user.username}}</h1>
 </template>
 
 <script>
@@ -21,6 +21,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>
