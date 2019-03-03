@@ -2,6 +2,8 @@
 
 ## Part 1 - Using the AWS Amplify Vue Component
 
+> For part 2 (custom authentication), check out the part2 branch
+
 How to implement a real user authentication flow in Vue with Vue Router & AWS Amplify.
 
 This repository goes along with the tutorial on [Dev.to](https://dev.to/) located here.
