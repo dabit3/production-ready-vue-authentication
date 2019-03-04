@@ -1,5 +1,7 @@
 # Production-ready Vue Authentication
 
+![](vuecolors.jpg)
+
 ## Part 2 - Vue Authentication with Custom Auth Flow
 
 > For part 1 (custom authentication), check out the part1 branch
