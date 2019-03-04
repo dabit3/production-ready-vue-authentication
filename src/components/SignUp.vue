@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{ formState === 'signUp' ? 'Siogn Up' : 'Confirm Sign Up' }}</h2>
+    <h2>{{ formState === 'signUp' ? 'Sign Up' : 'Confirm Sign Up' }}</h2>
     <div class='formcontainer' v-if="formState === 'signUp'">
       <input v-model='form.username' class='input' />
       <input type='password' v-model='form.password' class='input' />
