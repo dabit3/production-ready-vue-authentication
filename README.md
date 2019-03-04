@@ -1,5 +1,7 @@
 # Production-ready Vue Authentication
 
+![](vuecolors.jpg)
+
 ## Part 1 - Using the AWS Amplify Vue Component
 
 > For part 2 (custom authentication), check out the part2 branch
