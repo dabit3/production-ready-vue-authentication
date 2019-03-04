@@ -15,11 +15,6 @@ import SignIn from './SignIn'
 
 export default {
   name: 'app',
-  beforeCreate() {
-    AmplifyEventBus.$on('authState', info => {
-     console.log('info: ', info)
-    })
-  },
   data() {
     return {
       formState: 'signUp'
