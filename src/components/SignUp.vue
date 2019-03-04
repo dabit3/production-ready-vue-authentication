@@ -19,6 +19,7 @@ import { Auth } from 'aws-amplify'
 
 export default {
   name: 'home',
+  props: ['toggle'],
   data() {
     return {
       formState: 'signUp',
@@ -40,6 +41,8 @@ export default {
     async confirmSignUp() {
       const { username, authCode } = this.form
       await Auth.confirmSignUp(username, authCode)
+      alert('successfully signed up! Sign in to view the app.')
+      this.toggle()
     }
   }
 }

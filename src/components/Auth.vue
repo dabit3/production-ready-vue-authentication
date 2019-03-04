@@ -1,6 +1,6 @@
 <template>
   <div class="auth">
-    <sign-up v-if="formState === 'signUp'"></sign-up>
+    <sign-up :toggle='toggle' v-if="formState === 'signUp'"></sign-up>
     <sign-in v-if="formState === 'signIn'"></sign-in>
     <p v-on:click="toggle" class="toggle">{{ formState === 'signUp' ?
       'Already sign up? Sign In' : 'Need an account? Sign Up'
