@@ -10,9 +10,11 @@ How to implement a real user authentication flow in Vue with Vue Router & AWS Am
 
 This repository goes along with the tutorial on [Dev.to](https://dev.to/) located [here](https://dev.to/dabit3/how-to-build-production-ready-vue-authentication-23mk).
 
-### Getting started
+### To deploy this app - Amplify Console
 
-To run this app, follow these steps
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/username/repository)
+
+To run locally, follow these steps
 
 1. Download the project
 
