@@ -1,14 +1,14 @@
 import VueRouter from 'vue-router'
-import Vue from 'vue'
+import { Auth } from 'aws-amplify'
 
 import Home from './components/Home'
 import Profile from './components/Profile'
-import Auth from './components/Auth'
+import AuthComponent from './components/Auth'
 import Protected from './components/Protected'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/auth', component: Auth },
+  { path: '/auth', component: AuthComponent },
   { path: '/protected', component: Protected, meta: { requiresAuth: true} },
   { path: '/profile', component: Profile, meta: { requiresAuth: true} }
 ]
@@ -19,13 +19,9 @@ const router = new VueRouter({
 
 router.beforeResolve((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    let user;
-    Vue.prototype.$Amplify.Auth.currentAuthenticatedUser().then(data => {
-      if (data && data.signInUserSession) {
-        user = data;
-      }
+    Auth.currentAuthenticatedUser().then(() => {
       next()
-    }).catch((e) => {
+    }).catch(() => {
       next({
         path: '/auth'
       });
