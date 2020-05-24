@@ -1,8 +1,10 @@
 {
 	"auth": {
-		"auth": {
+		"vueauth8ca01f1f": {
 			"service": "Cognito",
-			"providerPlugin": "awscloudformation"
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
 		}
 	}
 }

@@ -9,12 +9,11 @@
 </template>
 
 <script>
-import { AmplifyEventBus } from 'aws-amplify-vue'
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 
 export default {
-  name: 'auth',
+  name: 'app',
   data() {
     return {
       formState: 'signUp'

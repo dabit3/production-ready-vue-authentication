@@ -2,13 +2,13 @@
   <div>
     <h2>{{ formState === 'signUp' ? 'Sign Up' : 'Confirm Sign Up' }}</h2>
     <div class='formcontainer' v-if="formState === 'signUp'">
-      <input v-model='form.username' class='input' />
-      <input type='password' v-model='form.password' class='input' />
-      <input v-model='form.email' class='input' />
+      <input placeholder="username" v-model='form.username' class='input' />
+      <input placeholder="password" type='password' v-model='form.password' class='input' />
+      <input placeholder="email" v-model='form.email' class='input' />
       <button v-on:click='signUp' class='button'>Sign Up</button>
     </div>
     <div class='formcontainer' v-if="formState === 'confirmSignUp'">
-      <input v-model='form.authCode' class='input' />
+      <input placeholder="confirmation code" v-model='form.authCode' class='input' />
       <button v-on:click='confirmSignUp' class='button'>Confirm Sign Up</button>
     </div>
   </div>

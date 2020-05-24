@@ -15,15 +15,14 @@
       </router-link>
     </div>
     <router-view></router-view>
-    <div class='sign-out' v-if="signedIn">
-      <amplify-sign-out ></amplify-sign-out>
+    <div class='sign-out'>
+      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
     </div>
   </div>
 </template>
 
 <script>
-import { AmplifyEventBus } from 'aws-amplify-vue'
-import { Auth } from 'aws-amplify'
+import { Auth, Hub } from 'aws-amplify'
 
 export default {
   name: 'app',
@@ -33,19 +32,20 @@ export default {
     }
   },
   beforeCreate() {
-    AmplifyEventBus.$on('authState', info => {
-      if (info === 'signedIn') {
+    Hub.listen('auth', data => {
+      console.log('data:', data)
+      const { payload } = data
+      if (payload.event === 'signIn') {
         this.signedIn = true
         this.$router.push('/profile')
       }
-      if (info === 'signedOut') {
+      if (payload.event === 'signOut') {
         this.$router.push('/auth')
         this.signedIn = false
       }
-    });
-
+    })
     Auth.currentAuthenticatedUser()
-      .then(user => {
+      .then(() => {
         this.signedIn = true
       })
       .catch(() => this.signedIn = false)
@@ -54,7 +54,6 @@ export default {
 </script>
 
 <style>
-
 .nav {
   display: flex;
 }
